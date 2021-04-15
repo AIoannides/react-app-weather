@@ -1,0 +1,47 @@
+.App {
+  max-width: 600px;
+  margin: 30px auto;
+}
+body {
+  background-color: #151b29;
+  font-family: monospace;
+  color: #f1ff5c;
+}
+
+h1 {
+  color: #f1ff5c;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #f1ff5c;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 19px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+.search-button {
+  background: none;
+  color: #fff;
+  border: 2px solid;
+  transition: all 0.25s;
+}
+.search-button:hover {
+  border-color: #f1ff5c;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+}
