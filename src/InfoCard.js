@@ -1,4 +1,5 @@
 import DisplayDate from "./DisplayDate";
+import "./InfoCard.css";
 
 export default function InfoCard(props) {
   return (
