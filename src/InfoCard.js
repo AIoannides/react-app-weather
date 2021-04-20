@@ -1,4 +1,5 @@
 import DisplayDate from "./DisplayDate";
+import CelsiusTemp from "./CelsiusTemp";
 import "./InfoCard.css";
 
 export default function InfoCard(props) {
@@ -21,10 +22,7 @@ export default function InfoCard(props) {
               className="float-left"
             />
             <div className="float-left">
-              <strong>{Math.round(props.info.temperature)}</strong>
-              <span className="units">
-                <a href="/">°C</a> | <a href="/">°F</a>
-              </span>
+              <CelsiusTemp celsius={props.info.temperature} />
             </div>
           </div>
         </div>
