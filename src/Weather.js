@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Forecast from "./Forecast";
 import InfoCard from "./InfoCard";
 import axios from "axios";
 
@@ -8,9 +8,11 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherInfo, setWeatherInfo] = useState({ loading: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     setWeatherInfo({
       loading: true,
+      coords: response.data.coord,
       date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
@@ -60,6 +62,7 @@ export default function Weather(props) {
           </div>
         </form>
         <InfoCard info={weatherInfo} />
+        <Forecast coords={weatherInfo.coords} />
       </div>
     );
   } else {
