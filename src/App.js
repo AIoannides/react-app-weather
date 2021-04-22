@@ -8,13 +8,21 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="London" />
         <footer>
-          This project is created by A.A Ioannides and is{" "}
+          Created by A.A Ioannides, open-sourced on{" "}
           <a
             href="https://github.com/AIoannides/react-app-weather"
             target="_blank"
             rel="noreferrer"
           >
-            open-sourced on GitHub
+            GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://lucid-neumann-63ac51.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Netlify
           </a>
         </footer>
       </div>

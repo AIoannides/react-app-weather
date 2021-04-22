@@ -1,3 +1,7 @@
+.ForecastDay {
+  text-align: center;
+  border: 1px solid white;
+}
 .ForecastDay img {
   width: 50px;
 }

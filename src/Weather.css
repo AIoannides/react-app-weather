@@ -4,3 +4,20 @@
   border-radius: 5px;
   text-decoration-line: none;
 }
+.pinbutton {
+  border: 1px solid white;
+  margin: 5px;
+  padding: 20px;
+  background: none;
+  color: #fff;
+  border: 2px solid;
+  transition: all 0.25s;
+}
+
+.pin-button:hover {
+  border-color: #f1ff5c;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+  color: #f1ff5c;
+}
