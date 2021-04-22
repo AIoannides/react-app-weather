@@ -13,26 +13,28 @@ export default function Forecast(props) {
   }, [props.coords]);
 
   function handleResponse(response) {
-    console.log(response);
     setForecast(response.data.daily);
     setLoaded(true);
   }
 
   if (loaded) {
     return (
-      <div className="Forecast">
-        <div className="row">
-          {forecast.map(function (dailyForecast, index) {
-            if (index < 6) {
-              return (
-                <div className="col" key={index}>
-                  <ForecastDay data={dailyForecast} />
-                </div>
-              );
-            } else {
-              return null;
-            }
-          })}
+      <div className="Forecast-title">
+        <h4>Forecast</h4>
+        <div className="Forecast">
+          <div className="row">
+            {forecast.map(function (dailyForecast, index) {
+              if (index < 6) {
+                return (
+                  <div className="col" key={index}>
+                    <ForecastDay data={dailyForecast} />
+                  </div>
+                );
+              } else {
+                return null;
+              }
+            })}
+          </div>
         </div>
       </div>
     );
