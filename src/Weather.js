@@ -78,7 +78,7 @@ export default function Weather(props) {
                 onClick={currentLocation}
                 type="button"
               >
-                <i class="fas fa-map-pin"></i>
+                <i className="fas fa-map-pin"></i>
               </button>
             </div>
           </div>
