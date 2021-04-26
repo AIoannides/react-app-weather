@@ -23,6 +23,15 @@ export default function Weather(props) {
     });
   }
 
+  function Position(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "e7f2bc81aa08f090449b3f17d24f1333";
+    let geoUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+
+    axios.get(geoUrl).then(handleResponse);
+  }
+
   function search() {
     const apiKey = "e7f2bc81aa08f090449b3f17d24f1333";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -36,6 +45,9 @@ export default function Weather(props) {
 
   function handleChange(event) {
     setCity(event.target.value);
+  }
+  function currentLocation() {
+    navigator.geolocation.getCurrentPosition(Position);
   }
 
   if (weatherInfo.loading) {
@@ -63,6 +75,7 @@ export default function Weather(props) {
               <button
                 className="btn btn-outline-secondary
                 pin-button"
+                onClick={currentLocation}
                 type="button"
               >
                 <i class="fas fa-map-pin"></i>
